@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Time Planner</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgNI5VD5spC1Z7GStCOQrEb86H8RNUl219HW6Xy3NC9QU" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1>Smart Time Planner</h1>
+<p>Enter your tasks, time preferences, and additional information. We'll optimize your schedule and help you stay productive.</p>
+<form action="/generate_schedule" method="POST">
+<div class="form-group">
+<label for="tasks">Tasks:</label>
+<textarea class="form-control" id="tasks" name="tasks" rows="5"></textarea>
+</div>
+<div class="form-group">
+<label for="time_slots">Time Slots:</label>
+<input type="text" class="form-control" id="time_slots" name="time_slots" placeholder="Enter time slots in HH:MM format, separated by commas">
+</div>
+<div class="form-group">
+<label for="preferences">Preferences:</label>
+<select class="form-control" id="preferences" name="preferences">
+<option value="earliest_start">Earliest Start</option>
+<option value="latest_start">Latest Start</option>
+<option value="shortest_duration">Shortest Duration</option>
+<option value="longest_duration">Longest Duration</option>
+</select>
+</div>
+<button type="submit" class="btn btn-primary">Generate Schedule</button>
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
